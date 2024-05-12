@@ -23,7 +23,7 @@ from langchain import PromptTemplate
 @csrf_exempt
 def chatbot_view(request):
     if request.method == 'POST':
-        openai_api_key = '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'
+        openai_api_key = 'api_key'
         llm = OpenAI(openai_api_key=openai_api_key, temperature=0.8)
 
         input_text = request.POST.get('input_text', '')
